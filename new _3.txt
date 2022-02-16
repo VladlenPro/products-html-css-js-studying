@@ -1,0 +1,10 @@
+Coke	Coke-Cola	8.90	true	20
+Coke	Pepsi	7.50	true	30
+Milk	Strauss	5.90	true	15
+Milk	Tara	5.90	true	5
+Tooth Brush	Colgate	15	false	50
+shampoo	Pinuk	10	false	45
+Salt cookies	Abadi	17.40	true	23
+Pesek Zenab	Elite	22	true	37
+Yellow Cheese	Tenuva	25	true	13
+Lighter	Clipper	7	false	28
