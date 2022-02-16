@@ -13,7 +13,7 @@ body {
 .topNav {
     grid-column: 1/5;
     grid-row: 1/1;
-    background-color: grey;
+    background-color: #131921;
     /* border-radius: 2px; */
 
 }
@@ -21,7 +21,7 @@ body {
 .sideBar {
     grid-column: 1/1;
     grid-row: 2/4;
-    background-color: blue;
+    background-color: #FFFFFF;
     border-radius: 2px;
 
 }
@@ -39,14 +39,8 @@ body {
 
 .mainContainer {
     display: grid;
-    /* grid-template-rows: repeat(auto-fill, 100px); */
-    grid-template-columns: repeat(4, 1fr);
-    /* gap: 10px; */
+    grid-template-columns: repeat(5, 20%);
     grid-auto-rows: 300px;
-    /* "a b c" 33% 
-            "d e f" 33% 
-            "g h i" 33%
-            "m n o" 33%  /1fr 1fr 1fr; */
             border-radius: 2%;
     max-height: 100%;
 
@@ -63,7 +57,7 @@ body {
 .fotterDiv {
     grid-column: 1/5;
     grid-row: 4/5;
-    background-color: yellow;
+    background-color: #232F3E;
     border-radius: 2px;
     position: relative;
     /* height: 2.5rem;
