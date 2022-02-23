@@ -1,34 +1,28 @@
-//import {Product} from "../Modules/product.js";
-//const Product =require("../Modules/product.js"); 
+//const Product = require("../Modules/product");
+//import Product from "../Modules/product";
 
-
-// const Product = require('../Modules/product');
-// const conProducts = new Product();
-//import {default as Product}  from '../Modules/product.js';
-//import * as product from '../Modules/product.js';
-//let Product = product.default;
-
-
-function Product(name, brand, price, isFood, qty){
-    this.name=name;
-    this.brand=brand;
-    this.price=price;
-    this.isFood=isFood;
-    this.qty=qty;
-  }
-let product1 = new Product("Coke", "Coca-Kola", 8.90, true, 20);
-let product2 = new Product("Coke", "Pepsi", 7.50, true, 30);
-let product3 = new Product("Milk", "Strauss", 5.90, true, 15);
-let product4 = new Product("Milk", "Tara", 5.90, true, 5);
-let product5 = new Product("ToothBrush", "Colgate", 15, false, 50);
-let product6 = new Product("shampoo", "Pinuk", 10, false, 45);
-let product7 = new Product("SaltCookies", "Abadi", 17.40, true, 23);
-let product8 = new Product("PesekZenab", "Elite", 22, true, 37);
-let product9 = new Product("YellowCheese","Tenuva", 25, true, 13);
-let product10 = new Product("Lighter", "Clipper", 7, false, 28);
+function Product(imgsrc, name, brand, price, isFood, qty) {
+    this.imgsrc = imgsrc;
+    this.name = name;
+    this.brand = brand;
+    this.price = price;
+    this.isFood = isFood;
+    this.qty = qty;
+}
+let itemsBox = document.getElementById('items');
+let product1 = new Product("https://icon-library.com/images/pictures-icon-png/pictures-icon-png-6.jpg", "Coke", "Coca-Kola", 8.90, true, 20);
+let product2 = new Product("https://icon-library.com/images/pictures-icon-png/pictures-icon-png-6.jpg", "Coke", "Pepsi", 7.50, true, 30);
+let product3 = new Product("https://icon-library.com/images/pictures-icon-png/pictures-icon-png-6.jpg", "Milk", "Strauss", 5.90, true, 15);
+let product4 = new Product("https://icon-library.com/images/pictures-icon-png/pictures-icon-png-6.jpg", "Milk", "Tara", 5.90, true, 5);
+let product5 = new Product("https://icon-library.com/images/pictures-icon-png/pictures-icon-png-6.jpg", "ToothBrush", "Colgate", 15, false, 50);
+let product6 = new Product("https://icon-library.com/images/pictures-icon-png/pictures-icon-png-6.jpg", "shampoo", "Pinuk", 10, false, 45);
+let product7 = new Product("https://icon-library.com/images/pictures-icon-png/pictures-icon-png-6.jpg", "SaltCookies", "Abadi", 17.40, true, 23);
+let product8 = new Product("https://icon-library.com/images/pictures-icon-png/pictures-icon-png-6.jpg", "PesekZenab", "Elite", 22, true, 37);
+let product9 = new Product("https://icon-library.com/images/pictures-icon-png/pictures-icon-png-6.jpg", "YellowCheese", "Tenuva", 25, true, 13);
+let product10 = new Product("https://icon-library.com/images/pictures-icon-png/pictures-icon-png-6.jpg", "Lighter", "Clipper", 7, false, 28);
 //console.log(product1);
 
-let products =[];
+let products = [];
 products.push(product1);
 products.push(product2);
 products.push(product3);
@@ -40,28 +34,26 @@ products.push(product8);
 products.push(product9);
 products.push(product10);
 
-function feelDiv(product){
+function feelDiv(product) {
     let text;
 
-    text =`<div class="productDiv1">
-    ${product.name}
-        <br>
-        ${product.brand}
-        <br>
-        ${product.price}
-        <br>
-        ${product.isFood}
-        <br>
-        ${product.qty}
-        </div>`;
+    text = `<div class="card">
+    <img src="${product.imgsrc}"/>
+    <h1>${product.name}</h1>
+    <h2>${product.brand}</h2>
+    <p class="price">${product.price}$</p>
+    <p>Some text about the jeans..</p>
+    <p> Number of items: ${product.qty}</p>
+    <p><button>Add to Cart</button></p>
+    </div>`;
     return text;
 }
-let items =[];
+let items = [];
 
 products.forEach(element => {
     items.push(feelDiv(element));
 });
 
-let itemsBox= document.getElementById('items');
-itemsBox.innerHTML =items.join("");
+
+itemsBox.innerHTML = items.join("");
 console.log(itemsBox.innerHTML);
